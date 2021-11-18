@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+   
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid black;
+}
+nav h1{
+    color: black;
+    font-family: 'PlayFair Display', sans-serif;
+    font-size: 30px;
+}
+nav .onglets{
+    margin-top: 3px;
+    margin-left: 300px;
+}
+
+nav .onglets a{
+    text-decoration: none;
+    color: #000;
+    margin-right: 10px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('Images/Bann.jpg');
+    background-size: cover;
+    color: #fff;
+    padding: 40px;
+}
+
+header h1{
+    font-family: 'PlayFair Display', sans-serif;
+    font-size: 50px;
+}
+
+header h4{
+    margin-top: -20px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+
+header button{
+    padding: 10px 20px;
+    background-color: #ff7948;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    font-family: 'PlayFair Display', sans-serif;
+    outline: none;
+    cursor: pointer;
+
+    border-radius: 15px;
+background: linear-gradient(145deg, #ff814d, #e66d41);
+box-shadow:  5px 5px 10px #c75e38,
+             -5px -5px 10px #ff9458;
+}
+
+header button:hover{
+    border-radius: 15px;
+    background: #ff7948;
+    box-shadow: inset 5px 5px 10px #c75e38,
+                inset -5px -5px 10px #ff9458;
+}
+
+
+.image{
+    min-width: 60px;
+    margin: 10px;
+    cursor: pointer;
+    transition: .5s cubic-bezier(0.05, 0.61, 0.41,0.95);
+    overflow: hidden;
+    position: relative;
+}
+.portfolio{
+    display: flex;
+    min-width: 600px;
+    max-width: 900px;
+    height: 400px;
+    margin: 4rem auto;
+}
+.image.active{
+    flex-grow: 100;
+    max-width: 600px;
+    margin: 0px;
+    border-radius: 7px;
+    background-size: auto 100%;
+}
+
+.image:not(.active){
+    flex-grow: 1;
+    border-radius: 5px;
+}
+.text-container{
+    width: 100%;
+    height: 400px;
+    padding: 2rem;
+    visibility: hidden;
+    transform: translateY(300px);
+    opacity: 0;
+    transition: all .4s ease;
+    background: linear-gradient(354deg, black 0%, transparent 72%);
+    color: white;
+    overflow: hidden;
+}
+.text{
+    position: absolute;
+    bottom: 5rem;
+}
+.active .text-container{
+    visibility: visible;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+footer{
+    margin-top: 100px;
+    border-top: 5px solid #ff7948;
+    background-color: #000;
+    color: white;
+    padding: 30px 100px;
+}
+
+footer h1{
+    font-family: 'PlayFair Display', sans-serif;
+    border-bottom: 1px solid #ff7948;
+    width: 25%;
+    padding-bottom: 5px;
+}
+
+footer .services{
+    margin-top: -10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .services .service{
+    margin-right: 30px;
+    padding: 10px;
+}
+
+footer .services .service p{
+    max-width: 300px;
+}
+footer .services .service a{
+    max-width: 300px;
+    text-decoration: none;
+    color: #fff;
+}
+footer #contacts{
+    color: rgb(181, 181, 181);
+}
+
+.main{
+    margin-top: 80px;
+}
+
+@media screen and (max-width:680px){
+    nav .onglets{
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    .main .card{
+        margin: 10px;
+    }
+    .main .content .card .right img{
+        height: 200px;
+        width: 100%;
+        margin-top: 0px;
+    }
+    .main .content .card{
+        display: block;
+    }
+    footer{
+        padding: 30px;
+    }
+
+    .image{
+        min-width: 60px;
+        margin: 10px;
+        cursor: pointer;
+        transition: .5s cubic-bezier(0.05, 0.61, 0.41,0.95);
+        overflow: hidden;
+        position: relative;
+    }
+    .portfolio{
+        display: flex;
+        flex-direction: column;
+        min-width: 300px;
+        max-width: 500px;
+        height: 900px;
+        margin: 4rem auto;
+    }
+    .image.active{
+        flex-grow: 100;
+        max-width: 500px;
+        margin: 0px;
+        border-radius: 7px;
+        background-size: auto 100%;
+    }
+    
+    .image:not(.active){
+        flex-grow: 1;
+        border-radius: 5px;
+    }
+
+}
